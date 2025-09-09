@@ -8,12 +8,16 @@
 :root {
     --main: rgb(25, 146, 212);
     --grey: rgb(255, 255, 255);
+    --svg_size: 
 }
 
 .dashboard * svg {
     fill: white;
     height: 1.3em;
   }
+.header * svg {
+    height: 1.7rem;
+}  
 
 ul > li {
     display: flex;
@@ -21,12 +25,19 @@ ul > li {
     font-weight: 800;
 }
 
+span > img {
+    border-radius: 200px;
+}
+
+
+
 body {
     display: grid;
     grid-template-columns: 1fr 5fr;
     min-height: 100vh;
     grid-template-rows: 25vh auto;
     font-family: Arial, Helvetica, sans-serif;
+    
 }
 
 .dashboard {
@@ -59,29 +70,94 @@ body {
 .header {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
-    border: solid red 1px;
-    display: flex;
-    flex-direction: column;
-
+    
+    display: grid;
+    
+    grid-template-rows: 1fr 1fr;
+    padding: 0 5vw;
 }
 
-.header > div{
-    border: solid blue 2px;
-    height: 100%;
-}
+
 
 .up {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    grid-column: 1/3;
+    flex-wrap: wrap;
+    font-weight: 700;
 }
+
 
 .search {
   width: 40vw;
   height: 2rem;
   border-radius: 40px;
-  background-color: black;
+  background-color: rgb(225, 232, 240);
   border: none;
+}
+
+.search1 {
+    display: flex;
+    align-items:center;
+    gap: 4px;
+}
+
+.symb{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.acc {
+    border-radius: 50%;
+    border: none;
+    height: 2.2rem;
+    width: 2.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.morgan {
+    background-color:yellow;
+    color: RGB(250, 169, 17);
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+.down {
+    grid-column: 1/3;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+.double {
+    height: 4rem;
+    width: 4rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+    grid-row: 1/3;
+    margin-right: 5vh;
+}
+
+.hi {
+    grid-column: 2/3;
+    font-weight: 600;
+    font-size: 0.8rem;
+    position: relative;
+    top: 15px;
+}
+
+.mo {
+    grid-column: 2/3;
+    font-size: 1.2rem;
+    font-weight: 700;
 }
 
 .content {
@@ -90,6 +166,23 @@ body {
     grid-row: 2 / 3;
     border: solid red 1px;
     grid-template-columns: 2fr 1fr;
+}
+
+.right {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.right button{
+    background-color: var(--main);
+    color: white;
+    border-radius: 20px;
+    height: 36px;
+    width: 8.5vw;
+    border: none;
+    font-weight: 600;
 }
 
 .content > div{
@@ -109,3 +202,4 @@ body {
     flex-direction: column;
     flex: 1;
 }
+
